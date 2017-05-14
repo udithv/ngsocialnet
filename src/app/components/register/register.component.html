@@ -1,0 +1,42 @@
+  <div class="regform">
+
+      <div class="container">
+        <form class="col s12" (submit)="onRegisterSubmit()">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="first_name" type="text" [(ngModel)]="firstname" name="firstname" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" [(ngModel)]="lastname" name="lastname" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+      <div class="input-field col s12">
+          <input id="username" type="text" [(ngModel)]="username" name="username" class="validate">
+          <label for="username">Username</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" [(ngModel)]="email" name="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" [(ngModel)]="password" name="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+     <button class="btn waves-effect pink" type="submit" name="action">Submit
+        
+      </button>
+     
+    </form>
+            
+      </div>
+
+  </div>

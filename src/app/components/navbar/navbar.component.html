@@ -1,0 +1,27 @@
+<nav class="pink accent-2" role="navigation">
+      <ul *ngIf="authService.loggedIn()" class="menu-icon-justify">
+        <li><i class="large material-icons">business</i></li>
+      </ul>
+    <div  class="nav-wrapper container">
+      <a *ngIf="!authService.loggedIn()" id="logo-container" [routerLink]="['/']" class="brand-logo">Businessimo</a>
+
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <form>
+            <div class="input-field">
+              <input id="search" type="search" required>
+              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons">close</i>
+            </div>
+          </form>
+        </li>
+        <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" ><a [routerLink]="['/register']">Register</a></li>
+        <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/login']">Login</a></li>
+        <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/dashboard']">Dashboard</a></li>
+        <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/profile']">Profile</a></li>
+         <li *ngIf="authService.loggedIn()" ><a href="#" (click)="onLogoutClick()">Logout</a></li>
+      </ul>
+
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
